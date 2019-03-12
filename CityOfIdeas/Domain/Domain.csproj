@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>CID.BL.Domain</AssemblyName>
+    <RootNamespace>CID.BL.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>
