@@ -45,7 +45,6 @@
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
 	padding: 0px; 
 	box-sizing: border-box;
 }
@@ -185,13 +184,17 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #0250c5;
-  background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -o-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: -moz-linear-gradient(bottom, #0250c5, #d43f8d);
-  background: linear-gradient(bottom, #0250c5, #d43f8d);
   position: relative;
   z-index: 1;
+}
+#backgroundLogin {
+
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))), url("/images/antwerp-centraalstation.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/images/antwerp-centraalstation.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
 .container-login100::before {
@@ -203,10 +206,6 @@ iframe {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: url('../images/img-01.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 .wrap-login100 {
