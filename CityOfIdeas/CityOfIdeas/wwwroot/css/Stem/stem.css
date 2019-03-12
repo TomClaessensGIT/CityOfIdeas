@@ -1,0 +1,21 @@
+@import "shared.css";
+
+.container{
+    max-height: 100vh;
+}
+
+.jumbotron{
+    height: auto;
+}
+
+.stem-stem{
+    float: right;
+    margin-top: 5rem; 
+    width: 100%;
+    height: auto;
+}
+
+.btn-group{
+    margin-top: 5rem; 
+    width: 80%;
+}
