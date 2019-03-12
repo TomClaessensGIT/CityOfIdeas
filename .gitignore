@@ -328,3 +328,5 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/CityOfIdeas/CityOfIdeas/Controllers/VragenlijstController.cs
+/CityOfIdeas/CityOfIdeas/Models/Vragenlijst.cs
