@@ -4,6 +4,8 @@
 }
 
 <!DOCTYPE html>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 <html lang="en">
 <head>
     <link href="~/css/Project/project.css" rel="stylesheet" />
@@ -21,8 +23,9 @@
             <article>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
             </article>
-            <form asp-controller="Stem" asp-action="Index"></form>
-            <button type="submit" class="btn btn-primary btn-lg">Stem</button>
+            <form asp-controller="Stem" asp-action="Index">
+                <button type="submit" class="btn btn-primary btn-lg">Stem</button></form>
+            
         </div>
     </div>
 
