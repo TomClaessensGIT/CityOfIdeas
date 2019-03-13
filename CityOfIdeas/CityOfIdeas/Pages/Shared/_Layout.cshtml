@@ -41,7 +41,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" asp-controller="Contact" asp-action="Index">Contact</a>
+                        <a class="nav-link js-scroll-trigger" asp-controller="Home" asp-action="Contact">Contact</a>
                     </li>
 
                     <li class="nav-item">
@@ -68,21 +68,14 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
+                    <h2 class="mt-0">Contacteer ons!</h2>
                     <hr class="divider my-4">
-                    <p class="text-muted mb-5">Ready to start your next project with us? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p class="text-muted mb-5">Klik op onderstaande icoon om contact te nemen met ons.</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center">
-                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="tel:+1 (202) 555-0149">+1 (202) 555-0149</a>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                <div class=" text-center">
+                    <a asp-controller="Home" asp-action="Contact"> <i class="fas fa-envelope fa-3x mb-3 text-muted"></i></a>
                     <!-- Make sure to change the email address in anchor text AND the link below! -->
-                    <a class="d-block" href="mailto:contact@yourwebsite.com">contact@yourwebsite.com</a>
-                </div>
             </div>
         </div>
     </section>
