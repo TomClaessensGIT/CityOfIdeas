@@ -1,5 +1,9 @@
 @import "shared.css";
 
+#spacer {
+    height: 3rem;
+}
+
 .container{
     max-height: 100vh;
 }
