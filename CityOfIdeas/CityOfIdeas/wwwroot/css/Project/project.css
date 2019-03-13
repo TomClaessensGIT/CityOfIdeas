@@ -12,7 +12,7 @@ height: 3rem;
 }
 
 .timeline-item {
-    padding-top: 1rem;
+    padding: 1rem;
     border-top: solid 2px #D6DCE0;
 }
 
@@ -25,18 +25,23 @@ height: 3rem;
         border: 1px solid #ddd;
         position: absolute;
         top: -0.8rem;
-        left: 42%;
-        transition: all 200ms ease-in;
+        
     }
 
     .timeline-item.complete {
         border-top: 2px solid #66DC71;
         font-color: #66DC71;
+        background-color: rgb(102, 220, 113, 0.2);
     }
 
-    .timeline-item:before.complete {
+    .timeline-item.complete:before {
         background-color: #66DC71;
         border: 1px solid #66DC71;
+    }
+
+    .timeline-item:hover:before {
+        transition: all 200ms ease-in;
+        transform: scale(1.1);
     }
 
 

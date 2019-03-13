@@ -7,7 +7,6 @@
 <html lang="en">
 <head>
     <link href="~/css/Project/project.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="spacer"></div>
@@ -27,21 +26,17 @@
     </div>
 
     <div class="row container no-gutters">
-        <div class="col-sm col-xs-6 d-flex flex-column">
-            <div class="p-2 timeline-item complete">project started</div>
-            <div class="p-2">01/04/2019</div>
+        <div class="col-sm col-xs-6">
+            <div class="timeline-item complete"><b>project started</b><br />01/04/2019</div>
         </div>
-        <div class="col-sm col-xs-6 d-flex flex-column">
-            <div class="p-2 timeline-item complete">fase 2</div>
-            <div class="p-2">10/04/2019</div>
+        <div class="col-sm col-xs-6">
+            <div class="timeline-item complete"><b>fase 2</b><br />03/04/2019</div>
         </div>
-        <div class="col-sm col-xs-6 d-flex flex-column">
-            <div class="p-2 timeline-item">fase 3</div>
-            <div class="p-2">24/04/2019</div>
+        <div class="col-sm col-xs-6">
+            <div class="timeline-item complete"><b>fase 3</b><br />14/04/2019</div>
         </div>
-        <div class="col-sm col-xs-6 d-flex flex-column">
-            <div class="p-2 timeline-item">project ended</div>
-            <div class="p-2">13/05/2019</div>
+        <div class="col-sm col-xs-6">
+            <div class="timeline-item"><b>eindfase</b><br />07/05/2019</div>
         </div>
     </div>
 
@@ -88,20 +83,6 @@
     <div class="jumbotron row">
         <h2>Fase X</h2>
     </div>
-    <script>
-        var completes = document.querySelectorAll(".complete");
-        var toggleButton = document.getElementById("toggleButton");
-
-
-        function toggleComplete() {
-            var lastComplete = completes[completes.length - 1];
-            lastComplete.classList.toggle('complete');
-        }
-
-        toggleButton.onclick = toggleComplete;
-    </script>
-
-    $(".timeline-item:eq(2)").addClass("complete");
 
 
 </body>
