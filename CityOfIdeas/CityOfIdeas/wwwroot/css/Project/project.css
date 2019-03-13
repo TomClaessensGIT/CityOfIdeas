@@ -11,9 +11,34 @@ height: 3rem;
     margin-bottom: 2rem;
 }
 
-.timeline-item{
-    border-bottom:solid 2px green;
+.timeline-item {
+    padding-top: 1rem;
+    border-top: solid 2px #D6DCE0;
 }
+
+    .timeline-item:before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: -0.8rem;
+        left: 42%;
+        transition: all 200ms ease-in;
+    }
+
+    .timeline-item.complete {
+        border-top: 2px solid #66DC71;
+        font-color: #66DC71;
+    }
+
+    .timeline-item:before.complete {
+        background-color: #66DC71;
+        border: 1px solid #66DC71;
+    }
+
 
 .timeline {
     list-style-type: none;
