@@ -7,79 +7,102 @@
 <html lang="en">
 <head>
     <link href="~/css/Project/project.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <div id="spacer"></div>
-        <div class="jumbotron row">
-            <div class="col-sm-4 col-12">
-                <img src="https://via.placeholder.com/450x300?text=Project-image" alt="Project image" class="img-thumbnail proj-image">
-            </div>
-            <div class="col-sm-8 col-12">
-                <h2>Titel here</h2>
-                <br>
-                <article>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
-                </article>
-                <form asp-controller="Stem" asp-action="Index"></form>
-                <button type="submit" class="btn btn-primary btn-lg">Stem</button>
-            </div>
+    <div class="jumbotron row">
+        <div class="col-sm-4 col-12">
+            <img src="https://via.placeholder.com/450x300?text=Project-image" alt="Project image" class="img-thumbnail proj-image">
         </div>
-
-        
-
-        <div class="proj-timeline">
-            <button id="toggleButton">Toggle</button>
-
-            <ul class="timeline" id="timeline">
-                <li class="li complete">
-                    <div class="timestamp">
-                        <span class="date">01/04/2019<span>
-                    </div>
-                    <div class="status">
-                        <h4> Project Started </h4>
-                    </div>
-                </li>
-                <li class="li complete">
-                    <div class="timestamp">
-                        <span class="date">10/04/2019<span>
-                    </div>
-                    <div class="status">
-                        <h4> Fase 2 </h4>
-                    </div>
-                </li>
-                <li class="li complete">
-                    <div class="timestamp">
-                        <span class="date">23/04/2019<span>
-                    </div>
-                    <div class="status">
-                        <h4> Fase 3 </h4>
-                    </div>
-                </li>
-                <li class="li">
-                    <div class="timestamp">
-                        <span class="date">13/05/2019<span>
-                    </div>
-                    <div class="status">
-                        <h4> Project Completed </h4>
-                    </div>
-                </li>
-            </ul>
+        <div class="col-sm-8 col-12">
+            <h2>Titel here</h2>
+            <br>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
+            </article>
+            <form asp-controller="Stem" asp-action="Index"></form>
+            <button type="submit" class="btn btn-primary btn-lg">Stem</button>
         </div>
-        <div class="jumbotron row">
-            <h2>Fase X</h2>
+    </div>
+
+    <div class="row container no-gutters">
+        <div class="col-sm col-xs-6 d-flex flex-column">
+            <div class="p-2 timeline-item complete">project started</div>
+            <div class="p-2">01/04/2019</div>
         </div>
-        <script>
-            var completes = document.querySelectorAll(".complete");
-            var toggleButton = document.getElementById("toggleButton");
+        <div class="col-sm col-xs-6 d-flex flex-column">
+            <div class="p-2 timeline-item complete">fase 2</div>
+            <div class="p-2">10/04/2019</div>
+        </div>
+        <div class="col-sm col-xs-6 d-flex flex-column">
+            <div class="p-2 timeline-item">fase 3</div>
+            <div class="p-2">24/04/2019</div>
+        </div>
+        <div class="col-sm col-xs-6 d-flex flex-column">
+            <div class="p-2 timeline-item">project ended</div>
+            <div class="p-2">13/05/2019</div>
+        </div>
+    </div>
 
 
-            function toggleComplete() {
-                var lastComplete = completes[completes.length - 1];
-                lastComplete.classList.toggle('complete');
-            }
 
-            toggleButton.onclick = toggleComplete;
-        </script>
-    
+    <div class="proj-timeline">
+        <button id="toggleButton">Toggle</button>
+
+        <ul class="timeline" id="timeline">
+            <li class="li complete">
+                <div class="timestamp">
+                    <span class="date">01/04/2019<span>
+                </div>
+                <div class="status">
+                    <h4> Project Started </h4>
+                </div>
+            </li>
+            <li class="li complete">
+                <div class="timestamp">
+                    <span class="date">10/04/2019<span>
+                </div>
+                <div class="status">
+                    <h4> Fase 2 </h4>
+                </div>
+            </li>
+            <li class="li complete">
+                <div class="timestamp">
+                    <span class="date">23/04/2019<span>
+                </div>
+                <div class="status">
+                    <h4> Fase 3 </h4>
+                </div>
+            </li>
+            <li class="li">
+                <div class="timestamp">
+                    <span class="date">13/05/2019<span>
+                </div>
+                <div class="status">
+                    <h4> Project Completed </h4>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="jumbotron row">
+        <h2>Fase X</h2>
+    </div>
+    <script>
+        var completes = document.querySelectorAll(".complete");
+        var toggleButton = document.getElementById("toggleButton");
+
+
+        function toggleComplete() {
+            var lastComplete = completes[completes.length - 1];
+            lastComplete.classList.toggle('complete');
+        }
+
+        toggleButton.onclick = toggleComplete;
+    </script>
+
+    $(".timeline-item:eq(2)").addClass("complete");
+
+
 </body>
 </html>
