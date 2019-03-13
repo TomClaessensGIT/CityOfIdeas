@@ -3200,7 +3200,7 @@ fieldset:disabled a.btn {
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.2rem;;
   line-height: 1.5;
   border-radius: 0.2rem;
 }
@@ -7156,9 +7156,12 @@ button.bg-dark:focus {
 }
 
 .d-flex {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
 }
 
 .d-inline-flex {
@@ -10439,6 +10442,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
+
   color: #6c757d !important;
 }
 
@@ -10677,7 +10681,7 @@ header.masthead h1 {
     padding-bottom: 0;
   }
   header.masthead p {
-    font-size: 1.15rem;
+    font-size: 2rem;
   }
   header.masthead h1 {
     font-size: 3rem;
