@@ -1,4 +1,5 @@
-﻿
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
 @{
     ViewData["Title"] = "Home Page";
     Layout = "~/Pages/Shared/_Layout.cshtml";
@@ -40,87 +41,103 @@
 </section>
 
 <!-- Portfolio Section -->
-<section id="portfolio">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/1.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/1.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/2.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/3.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/5.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
+
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="~/images/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="~/images/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption p-3">
-                        <div class="project-category text-white-50">
-                            Category
-                        </div>
-                        <div class="project-name">
-                            Project Name
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
+            <div class="col-md-4">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top" src="~/images/portfolio/thumbnails/1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                            </div>
+                            <small class="text-muted">101 likes | 9 shares</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
-</section>
+</div>
