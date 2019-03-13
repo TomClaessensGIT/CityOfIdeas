@@ -46,8 +46,77 @@
 
     <div class="jumbotron row">
         <h2>Fase X</h2>
-    </div>
+        <div>
+            <div class="col-sm-4 py-2">
+                <div class="card-img-top">
+                    <a asp-controller="Project" asp-action="Index"> <img class="card-img-top" src="~/images/portfolio/thumbnails/groenPlan.jpg" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <p class="card-text">Groenplan zorgt voor 187 hectaren extra groen in de stad</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">36Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">17 Share</i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="detailBox">
+                <div class="titleBox">
+                    <label>Comment Box</label>
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                </div>
+                <div class="commentBox">
+
+                    <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="actionBox">
+                    <ul class="commentList">
+                        <li>
+                            <div class="commenterImage">
+                                <img src="http://placekitten.com/50/50" />
+                            </div>
+                            <div class="commentText">
+                                <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="commenterImage">
+                                <img src="http://placekitten.com/45/45" />
+                            </div>
+                            <div class="commentText">
+                                <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">15 Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">2 Comment</i> </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="commenterImage">
+                                <img src="http://placekitten.com/40/40" />
+                            </div>
+                            <div class="commentText">
+                                <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">3 Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">0 Comment</i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Your comments" />
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-default">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
