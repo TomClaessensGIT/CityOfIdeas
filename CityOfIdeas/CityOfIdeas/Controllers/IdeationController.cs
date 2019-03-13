@@ -6,14 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CityOfIdeas.Controllers
 {
-    public class HomeController : Controller
+    public class IdeationController : Controller
     {
         public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Contact()
         {
             return View();
         }

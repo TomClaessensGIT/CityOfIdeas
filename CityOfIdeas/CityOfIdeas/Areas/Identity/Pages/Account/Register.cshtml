@@ -1,37 +1,103 @@
 ﻿@page
 @model RegisterModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Registreer";
 }
 
-<h2>@ViewData["Title"]</h2>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control" />
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+    <h2>@ViewData["Title"]</h2>
+    <div class="limiter" id="backgroundLogin">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title p-b-55">
+                        Registreer
+                    </span>
+
+                    <div class="wrap-input100 validate-input m-b-16">
+                        <input class="input100" type="text" name="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-envelope"></span>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-16">
+                        <input class="input100" type="tel" name="tel" placeholder="Telefoonnummer">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-phone-handset"></span>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-16">
+                        <input class="input100" type="text" name="street" placeholder="Straat">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-home"></span>
+                        </span>
+                    </div>
+
+
+                    <div class="wrap-input100 validate-input m-b-16">
+                        <input class="input100" type="number" name="post" placeholder="Postcode">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-location"></span>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-lock"></span>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Bevestig wachtwoord">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <span class="lnr lnr-lock"></span>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn p-t-25">
+                        <button class="login100-form-btn">
+                            Registreer
+                        </button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Password"></label>
-                <input asp-for="Input.Password" class="form-control" />
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
-                <input asp-for="Input.ConfirmPassword" class="form-control" />
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-default">Register</button>
-        </form>
+        </div>
     </div>
-</div>
-
+</body>
+</html>
 @section Scripts {
+
     <partial name="_ValidationScriptsPartial" />
 }
