@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <TITLE>Vragenlijst</TITLE>
+    <link href="~/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Project/project.css" rel="stylesheet" />
+</head>
+<body class="container">
+    1.Wat wilt u het liefste in Antwerpen:<BR>
+    <form action="" method="post">
+        <input type="radio" name="vraag1" value="Zwembad" /> Zwembad<BR>
+        <input type="radio" name="vraag1" value="Casino" /> Casino<BR>
+        <input type="radio" name="vraag1" value="Park" /> Park<BR>
+        <input type="radio" name="vraag1" value="Winkelcentrum" /> Winkelcentrum
+    </form>
+
+    <form action="" method="post">
+        Heb je nog andere ideëen?
+        <input type="text" name="vraag2" /><BR>
+    </form>
+
+
+    <button type="submit" class="btn btn-primary btn-lg proj-stem">Indienen</button>
+    <script>
+        var completes = document.querySelectorAll(".complete");
+        var toggleButton = document.getElementById("toggleButton");
+
+
+        function toggleComplete() {
+            var lastComplete = completes[completes.length - 1];
+            lastComplete.classList.toggle('complete');
+        }
+
+        toggleButton.onclick = toggleComplete;
+    </script>
+</body>
+</html>
+
