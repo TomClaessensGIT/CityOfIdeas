@@ -12,6 +12,7 @@
 </head>
 <body>
     <div id="spacer"></div>
+@*
     <div class="jumbotron row">
         <div class="col-sm-4 col-12">
             <img src="https://via.placeholder.com/450x300?text=Project-image" alt="Project image" class="img-thumbnail proj-image">
@@ -23,8 +24,45 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
             </article>
             <form asp-controller="Stem" asp-action="Index">
-                <button type="submit" class="btn btn-primary btn-lg">Stem</button></form>
-            
+                <button type="submit" class="btn btn-primary btn-lg">Stem</button></form>              
+        </div>
+    </div>
+    *@
+    <div class="jumbotron row">
+        <div class="col-8">
+            <h3>Stem op Project Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h3>
+            <br>
+            <article>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
+            </article>
+        </div>
+        <div class="col-4">
+            @*
+                <video width="320" height="240" controls>
+                    <source src="projX.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            *@
+            <img src="~/images/projectX.jpg" width="320" height="240" />
+        </div>
+        <div class="col-8">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option1" autocomplete="off"> Keuze 1
+                </label>
+                <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="option2" autocomplete="off" checked> Keuze 2
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> Keuze 3
+                </label>
+                <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> Keuze 4
+                </label>
+            </div>
+        </div>
+        <div class="col-4">
+            <button type="button" class="btn btn-primary btn-lg stem-stem">Stem</button>
         </div>
     </div>
 
