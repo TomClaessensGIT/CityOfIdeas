@@ -42,7 +42,7 @@ height: 5rem;
 
     .timeline-item:hover {
         transition: all 200ms ease-in;
-        font-size-adjust: 0.66;
+        text-decoration: underline;
     }
 
     .timeline-item:hover:before {
