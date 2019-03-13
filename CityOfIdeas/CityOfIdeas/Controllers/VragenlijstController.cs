@@ -12,5 +12,10 @@ namespace CityOfIdeas.Controllers
         {
             return View();
         }
+
+        public IActionResult Proficiat()
+        {
+            return View();
+        }
     }
 }
