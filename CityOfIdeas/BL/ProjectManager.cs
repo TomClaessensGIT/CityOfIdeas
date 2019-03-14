@@ -36,9 +36,9 @@ namespace CID.BL
             throw new NotImplementedException();
         }
 
-        public Project GetProject(int ticketNumber)
+        public Project GetProject(string projectNumber)
         {
-            throw new NotImplementedException();
+            return repo.ReadProject(projectNumber);
         }
 
         public IEnumerable<Project> GetProjects()
@@ -46,7 +46,7 @@ namespace CID.BL
             return repo.ReadProjects();
         }
 
-        public void RemoveProject(int ticketNumber)
+        public void RemoveProject(string projectNumber)
         {
             throw new NotImplementedException();
         }

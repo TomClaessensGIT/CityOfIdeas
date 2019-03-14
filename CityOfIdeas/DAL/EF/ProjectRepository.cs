@@ -25,12 +25,12 @@ namespace CID.DAL.EF
             throw new NotImplementedException();
         }
 
-        public void DeleteProject(int projectNumber)
+        public void DeleteProject(string projectNumber)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Ideation> ReadIDeationsOfProject(int projectNumber)
+        public IEnumerable<Ideation> ReadIDeationsOfProject(string projectNumber)
         {
             IEnumerable<Ideation> ideations = ctx.Ideations
                                                       .Where(ideation => ideation.Project.ID == projectNumber)
@@ -39,7 +39,7 @@ namespace CID.DAL.EF
             return ideations;
         }
 
-        public Project ReadProject(int projectNumber)
+        public Project ReadProject(string projectNumber)
         {
            
             return ctx.Projects.Find(projectNumber);

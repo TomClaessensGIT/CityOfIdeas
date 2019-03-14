@@ -7,7 +7,7 @@ namespace CID.BL.Domain
 {
     public class Project
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         [Required]
         [StringLength(100)]
         [Display(Name = "Titel")]

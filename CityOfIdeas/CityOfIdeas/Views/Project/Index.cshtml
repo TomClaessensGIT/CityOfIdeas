@@ -1,3 +1,4 @@
+@model CID.BL.Domain.Project
 @{
     ViewData["Title"] = "Home Page";
     Layout = "~/Pages/Shared/_Layout.cshtml";
@@ -38,10 +39,10 @@
         </div>
 
         <div class="col-md-8 col-12">
-            <h3>Stem op Project Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h3>
+            <h3>@Model.Title</h3>
             <br>
             <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
+                <p>@Model.Text </p>
             </article>
         </div>
 

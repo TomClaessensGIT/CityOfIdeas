@@ -6,7 +6,7 @@ namespace CID.BL.Domain
 {
    public class Ideation 
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         [Required]
         [StringLength(100)]
         [Display(Name = "Titel")]
