@@ -66,7 +66,6 @@ namespace CID.DAL.EF
                 Text = "Ik zou het enorm goed vinden moest er een onderscheid kunnen gemaakt worden tussen de fietsers en de voetgangers waardoor geen van de 2 last heeft van elkaar.",
                 Image = "images/portfolio/ideations/fietsersGescheiden.jpg",
                 Tags = new List<Tag>()
-
             };
             //Gebruik maken van tags!!
             Tag tag1 = new Tag()
