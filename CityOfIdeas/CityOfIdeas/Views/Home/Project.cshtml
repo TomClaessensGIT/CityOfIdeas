@@ -4,28 +4,28 @@
     ViewData["Title"] = "Home Page";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
-
-<!-- Portfolio Section -->
-<div style="height:4rem"></div>
-<div class="container-fluid content-row">
-    <div class="row">
-        @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
-        {
-            <div class="col-sm-4 py-2">
-                <div class="card-img-top">
-                    <a asp-controller="Project" asp-action="Index"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <p class="card-text"> @proj.Title</p>
-
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">101 Like</i> </button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">25 Share</i> </button>
-                            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <!-- Portfolio Section -->
+    
+        <div style="height:8rem"></div>
+        <div class="container">
+            <div class="row">
+                @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
+                {
+                    <div class="card" style="width: 35rem; height: 40rem; margin-right:10px; margin-bottom:10px">
+                        <img class="card-img-top" src="~/@proj.Image">
+                        <div class="card-block">
+                            <h3>@proj.Title</h3>
+                            <p style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">@proj.Text.Substring(0, 380)...</p>
                         </div>
                     </div>
-                </div>
+                }
             </div>
-        }
-    </div>
-    </div>
+            </div>
+</body>
+</html>
+
