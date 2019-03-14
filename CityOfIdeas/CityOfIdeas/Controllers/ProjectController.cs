@@ -24,5 +24,12 @@ namespace CityOfIdeas.Controllers
             Project project = mgr.GetProjectWithIdeations(id);
             return View(project);
         }
+
+        public IActionResult LoadComments(string id)
+        {
+            
+            return View();
+        }
+
     }
 }
