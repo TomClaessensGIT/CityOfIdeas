@@ -36,11 +36,7 @@ namespace CID.BL
             throw new NotImplementedException();
         }
 
-<<<<<<< HEAD
         public Project GetProject(string projectNumber)
-=======
-        public Project GetProject(string ticketNumber)
->>>>>>> 0e761e92ff1d215a4b66be536b211516dfec0d90
         {
             return repo.ReadProject(projectNumber);
         }
@@ -49,12 +45,8 @@ namespace CID.BL
         {
             return repo.ReadProjects();
         }
-
-<<<<<<< HEAD
-        public void RemoveProject(string projectNumber)
-=======
+        
         public void RemoveProject(string ticketNumber)
->>>>>>> 0e761e92ff1d215a4b66be536b211516dfec0d90
         {
             throw new NotImplementedException();
         }

@@ -17,6 +17,8 @@ namespace CID.BL.Domain
         [Display(Name = "Text")]
         public string Text { get; set; }
 
+        public string Image { get; set; }
+
         public virtual ICollection<Tag> Tags { get; set; }
 
         [Required]
