@@ -19,7 +19,7 @@ namespace CID.BL.Domain
 
         public string Image { get; set; }
 
-       /* public DateTime DateOpened { get; set; }*/
+        //public DateTime DateOpened { get; set; }
 
         public virtual ICollection<Tag> Tags { get; set; }
 
