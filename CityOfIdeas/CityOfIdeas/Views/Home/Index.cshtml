@@ -27,7 +27,7 @@
                 <h2 class="text-white mt-0">Antwerpen heeft jou nodig!</h2>
                 <hr class="divider light my-4">
                 <p class="text-white-50 mb-4">Klik op de knop om alle projecten te bekijken die in de stad Antwerpen momenteel actief zijn. Stem er op en geef je eigen inbreng, kies zelf welke projecten jou voorkeur hebben.</p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">Bekijk Projecten</a>
+                <a class="btn btn-light btn-xl js-scroll-trigger" asp-controller="Home" asp-action="Project">Bekijk Projecten</a>
             </div>
         </div>
     </div>
@@ -47,11 +47,9 @@
         {
             <div class="col-sm-4 py-2">
                 <div class="card-img-top">
-
                     <a asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
                     <div class="card-body">
                         <p class="card-text"> @proj.Title</p>
-
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
                                 <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">101 Like</i> </button>
@@ -64,4 +62,4 @@
             </div>
         }
     </div>
-    </div>
+</div>

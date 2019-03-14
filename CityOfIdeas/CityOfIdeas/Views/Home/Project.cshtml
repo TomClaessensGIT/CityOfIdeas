@@ -6,8 +6,6 @@
 }
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
 <body>
     <!-- Portfolio Section -->
         <div style="height:8rem"></div>
@@ -21,11 +19,11 @@
                         }
                     </style>
                     <div class="card" style="width: 35rem; height: 37rem; margin-right:10px; margin-bottom:10px;">
-                        <img class="card-img-top" src="~/@proj.Image">
+                        <a asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID"><img class="card-img-top" src="~/@proj.Image"></a>
                         <div class="card-block" style="display: -webkit-box; overflow: hidden; text-overflow: ellipsis; -webkit-line-clamp:5; -webkit-box-orient:vertical;">
                             <h3>@proj.Title</h3>
                             <p class="overflow-hidden" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px;">@proj.Text</p>
-                            <div style="text-align:left"><a style="font-size:12px; text-align:right;" asp-controller="Project" asp-action="Index" asp-rout-id="@proj.ID">Meer weergeven</a></div>
+                            <div style="text-align:left"><a style="font-size:12px; text-align:right;" asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID">Meer weergeven</a></div>
                             
                         </div>
                     </div>
