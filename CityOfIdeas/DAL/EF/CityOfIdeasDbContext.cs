@@ -11,7 +11,7 @@ namespace CID.DAL.EF
     {
         public CityOfIdeasDbContext()
         {
-            CityOfIdeasDbInitializer.Initialize(this, true);
+            CityOfIdeasDbInitializer.Initialize(this, false);
         }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Ideation> Ideations { get; set; }
