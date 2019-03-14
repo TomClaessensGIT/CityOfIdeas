@@ -8,12 +8,12 @@ namespace CID.BL
     public interface IProjectManager 
     {
         IEnumerable<Project> GetProjects();
-        Project GetProject(int ticketNumber);
+        Project GetProject(string ticketNumber);
         Project AddProject(string titel, string preface, string text);
         void ChangeProject(Project ticket);
-        void RemoveProject(int ticketNumber);
+        void RemoveProject(string ticketNumber);
 
-        IEnumerable<Ideation> GetIdeations(int projectNumber);
-        Ideation AddIdeation(int projectNumber, string title, string text, ICollection<TagEnum> tags);
+        IEnumerable<Ideation> GetIdeations(string projectNumber);
+        Ideation AddIdeation(string projectNumber, string title, string text, ICollection<TagEnum> tags);
     }
 }

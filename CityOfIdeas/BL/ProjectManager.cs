@@ -16,7 +16,7 @@ namespace CID.BL
             //repo = new TicketRepositoryHC();
             repo = new ProjectRepository();
         }
-        public Ideation AddIdeation(int projectNumber, string title, string text, ICollection<TagEnum> tags)
+        public Ideation AddIdeation(string projectNumber, string title, string text, ICollection<TagEnum> tags)
         {
             throw new NotImplementedException();
         }
@@ -31,12 +31,12 @@ namespace CID.BL
             throw new NotImplementedException();
         }
 
-        public IEnumerable<Ideation> GetIdeations(int projectNumber)
+        public IEnumerable<Ideation> GetIdeations(string projectNumber)
         {
             throw new NotImplementedException();
         }
 
-        public Project GetProject(int ticketNumber)
+        public Project GetProject(string ticketNumber)
         {
             throw new NotImplementedException();
         }
@@ -46,7 +46,7 @@ namespace CID.BL
             return repo.ReadProjects();
         }
 
-        public void RemoveProject(int ticketNumber)
+        public void RemoveProject(string ticketNumber)
         {
             throw new NotImplementedException();
         }

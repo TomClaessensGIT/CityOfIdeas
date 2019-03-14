@@ -5,16 +5,22 @@ using System.Text;
 
 namespace CID.DAL
 {
-    public interface IIdeationRepository
+    public interface IProjectRepository
     {
-        #region Ideation
-        IEnumerable<Ideation> ReadProjects();
-        // CRUD Ideation
-        Project CreateIdeation(Ideation ideation);
-        Project ReadIdeation(int projectNumber);
-        void UpdateIdeation(Ideation ideation);
-        void DeleteIdeation(int projectNumber);
+        #region Project
+        IEnumerable<Project> ReadProjects();
+        // CRUD Project
+        Project CreateProject(Project project);
+        Project ReadProject(string projectNumber);
+        void UpdateProject(Project ticket);
+        void DeleteProject(string projectNumber);
         #endregion
 
+        #region ProjectIdeation
+        IEnumerable<Ideation> ReadIDeationsOfProject(string projectNumber);
+        //// CRUD Ideation
+        Ideation CreateTicketResponse(Ideation ideation);
+        #endregion
     }
 }
+
