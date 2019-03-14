@@ -64,6 +64,7 @@ namespace CID.DAL.EF
                 Project = project1,
                 Title = "Voetgangers en fietsers gescheiden",
                 Text = "Ik zou het enorm goed vinden moest er een onderscheid kunnen gemaakt worden tussen de fietsers en de voetgangers waardoor geen van de 2 last heeft van elkaar.",
+                Image = "images/portfolio/ideations/fietsersGescheiden.jpg",
                 Tags = new List<Tag>()
 
             };
@@ -84,6 +85,7 @@ namespace CID.DAL.EF
                 Project = project1,
                 Title = "Maak de brug minder steil!",
                 Text = "De brug moet minder steil, zo kan iedereen gebruik maken van dit fantastisch idee ook oudere mensen!",
+                Image = "images/portfolio/ideations/brugSteil.jpg",
                 Tags = new List<Tag>()
 
             };
@@ -117,6 +119,7 @@ namespace CID.DAL.EF
                 Project = project2,
                 Title = "Bomen permament verwijderen",
                 Text = "Ik vind het te gevaarlijk dat de bomen er staan dus ik zou graag willen dat ze permament verwijderd worden in plaats van af en toe ze te verkorten.",
+                Image = "images/portfolio/ideations/bomenVerwijderen.jpg",
                 Tags = new List<Tag>()
 
             };
@@ -141,7 +144,9 @@ namespace CID.DAL.EF
                 Project = project3,
                 Title = "flitspalen",
                 Text = "Wanneer ik met mijn fiets op de Jules Moretuslei rijd merk ik dat de auto's veel te snel rijden dus wil ik graag meer flietsplaten",
+                Image = "images/portfolio/ideations/flitspalen.jpg",
                 Tags = new List<Tag>()
+
 
             };
 
