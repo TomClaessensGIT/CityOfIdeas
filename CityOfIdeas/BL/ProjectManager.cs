@@ -43,7 +43,7 @@ namespace CID.BL
 
         public IEnumerable<Project> GetProjects()
         {
-            throw new NotImplementedException();
+            return repo.ReadProjects();
         }
 
         public void RemoveProject(int ticketNumber)
