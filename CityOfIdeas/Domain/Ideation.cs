@@ -21,6 +21,9 @@ namespace CID.BL.Domain
 
         public virtual ICollection<Tag> Tags { get; set; }
 
+        public virtual ICollection<IdeationComment> Comments { get; set; }
+
+
         [Required]
         public virtual Project Project { get; set; }
 

@@ -65,7 +65,6 @@ namespace CID.DAL.EF
                 Title = "Voetgangers en fietsers gescheiden",
                 Text = "Ik zou het enorm goed vinden moest er een onderscheid kunnen gemaakt worden tussen de fietsers en de voetgangers waardoor geen van de 2 last heeft van elkaar.",
                 Tags = new List<Tag>()
-
             };
             //Gebruik maken van tags!!
             Tag tag1 = new Tag()
