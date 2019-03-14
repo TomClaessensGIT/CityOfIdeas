@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CID.BL;
+using CID.BL.Domain;
 
 namespace CityOfIdeas.Controllers
 {
@@ -18,9 +19,10 @@ namespace CityOfIdeas.Controllers
 
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
-            return View();
+            Project project = mgr.GetProject(id);
+            return View(project);
         }
     }
 }
