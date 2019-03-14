@@ -220,7 +220,7 @@ namespace CID.DAL.EF
 
             Ideation ideation7 = new Ideation()
             {
-                Project = project5,
+                Project = project6,
                 Title = "meer verlichting en controle",
                 Text = "Deze onverlichte gebieden trekken vaak louche zaken aan daarom  wil  ik graag meer verlichting en controles zodat het mogelijk is om hier 's avonds te wandelen",
                 Image = "images/portfolio/ideations/flitspalen.jpg",
