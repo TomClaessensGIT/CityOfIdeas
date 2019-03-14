@@ -2,31 +2,29 @@
     ViewData["Title"] = "Home Page";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
-
 <!DOCTYPE html>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-
 <html lang="en">
 <head>
     <link href="~/css/Project/project.css" rel="stylesheet" />
 </head>
 <body>
     <div id="spacer"></div>
-@*
-    <div class="jumbotron row">
-        <div class="col-sm-4 col-12">
-            <img src="https://via.placeholder.com/450x300?text=Project-image" alt="Project image" class="img-thumbnail proj-image">
+    @*
+        <div class="jumbotron row">
+            <div class="col-sm-4 col-12">
+                <img src="https://via.placeholder.com/450x300?text=Project-image" alt="Project image" class="img-thumbnail proj-image">
+            </div>
+            <div class="col-sm-8 col-12">
+                <h2>Titel here</h2>
+                <br>
+                <article>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
+                </article>
+                <form asp-controller="Stem" asp-action="Index">
+                    <button type="submit" class="btn btn-primary btn-lg">Stem</button></form>
+            </div>
         </div>
-        <div class="col-sm-8 col-12">
-            <h2>Titel here</h2>
-            <br>
-            <article>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut aliquam libero, sit amet venenatis orci. Mauris at leo eu ante suscipit ultrices at nec dui. Aliquam placerat malesuada erat, ut ultrices erat ultrices ac. Curabitur in mollis augue. Nulla luctus magna nisi, nec fringilla est tincidunt eu. Phasellus ultricies leo vel sapien consectetur, vel ullamcorper quam finibus. Quisque sit amet consequat metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin at nibh egestas, aliquet dolor vitae, consectetur nisi. </p>
-            </article>
-            <form asp-controller="Stem" asp-action="Index">
-                <button type="submit" class="btn btn-primary btn-lg">Stem</button></form>              
-        </div>
-    </div>
     *@
     <div class="jumbotron row">
         <div class="col-8">
@@ -62,10 +60,9 @@
             </div>
         </div>
         <div class="col-4">
-            <button type="button" class="btn btn-primary btn-lg stem-stem">Stem</button>
+            <input onclick="this.value = 'Gestemd'; this.disabled=true" type="button" class="btn btn-primary btn-lg stem-stem" value="Stem" id="myButton1" />
         </div>
     </div>
-
     <div class="row no-gutters">
         <div class="col-sm-6 col-md">
             <div class="timeline-item complete" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><b>project started</b><br />01/04/2019</div>
@@ -80,165 +77,273 @@
             <div class="timeline-item" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"><b>eindfase</b><br />07/05/2019</div>
         </div>
     </div>
+    <div class="jumbotron">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>Porject gestart</h2>
+                        <br>
+                        <br>
+                        <p>In hac habitasse platea dictumst. Vivamus sit amet dolor id erat fermentum egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dui augue, dictum vel tincidunt ut, mollis eu ipsum. Integer in arcu fringilla, tempor lorem ut, dictum mauris. Pellentesque non sodales ligula, ut ullamcorper leo. Sed justo neque, lacinia vel pulvinar sit amet, convallis vitae augue. Sed quis orci quis sapien ornare lacinia ac et lacus. Aliquam tincidunt enim felis, ut luctus velit semper a. Integer in mattis ipsum. Aliquam imperdiet vestibulum risus et eleifend. Fusce tincidunt et urna quis semper. Fusce vitae auctor neque. Ut erat nisl, molestie a consectetur non, dignissim a nisi. </p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>Fase 2 | Vragenlijst</h2>
+                        <br>
+                        <br>
+                        <form class="form-horizontal" asp-controller="Vragenlijst" asp-action="proficiat" method="GET">
+                    <fieldset>
+                    
+                    <!-- Form Name -->
+                    <legend>Krugerbrug Design</legend>
+                    
+                    <!-- Multiple Radios (inline) -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="radios">Zone</label>
+                      <div class="col-md-4"> 
+                        <label class="radio-inline" for="radios-0">
+                          <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                          30
+                        </label> 
+                        <label class="radio-inline" for="radios-1">
+                          <input type="radio" name="radios" id="radios-1" value="2">
+                          50
+                        </label>
+                      </div>
+                    </div>
+                    
+                    <!-- Multiple Radios -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="locatie">Ik woon in</label>
+                      <div class="col-md-4">
+                      <div class="radio">
+                        <label for="locatie-0">
+                          <input type="radio" name="locatie" id="locatie-0" value="1" checked="checked">
+                          Kiel
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="locatie-1">
+                          <input type="radio" name="locatie" id="locatie-1" value="2">
+                          Hoboken
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="locatie-2">
+                          <input type="radio" name="locatie" id="locatie-2" value="3">
+                          Polder
+                        </label>
+                        </div>
+                      <div class="radio">
+                        <label for="locatie-3">
+                          <input type="radio" name="locatie" id="locatie-3" value="">
+                          Andere
+                        </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Select Basic -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="selectbasic">Kleur Brug</label>
+                      <div class="col-md-5">
+                        <select id="selectbasic" name="selectbasic" class="form-control">
+                          <option value="1">Bruin/Wit</option>
+                          <option value="2">Zwart/Wit</option>
+                          <option value="3">Blauw/Geel</option>
+                          <option value="4">Wit/Goud</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <!-- Multiple Checkboxes -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="checkboxes">Opties</label>
+                      <div class="col-md-4">
+                      <div class="checkbox">
+                        <label for="checkboxes-0">
+                          <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+                          Voetpad
+                        </label>
+                        </div>
+                      <div class="checkbox">
+                        <label for="checkboxes-1">
+                          <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+                          Fietspad
+                        </label>
+                        </div>
+                      <div class="checkbox">
+                        <label for="checkboxes-2">
+                          <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+                          Tramspoor
+                        </label>
+                        </div>
+                      <div class="checkbox">
+                        <label for="checkboxes-3">
+                          <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+                          Weg
+                        </label>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Textarea -->
+                    <div class="form-group">
+                      <label class="col-md-4 control-label" for="textarea">Extra opmerking:</label>
+                      <div class="col-md-4">                     
+                        <textarea class="form-control" id="textarea" name="textarea">opmerkingen...</textarea>
+                      </div>
+                    </div>
+                    
+                    <!-- Button -->
+                    <div class="form-group">
+                      <div class="col-md-4">
+                        <button id="singlebutton" name="singlebutton" class="btn btn-success">Verzend</button>
+                      </div>
+                    </div>
+                    
+                    </fieldset>
+                    </form>
 
-<div class="jumbotron">
-    <div class="accordion" id="accordionExample">
-        <div class="card">
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h2>Fase 1</h2>
-                    <br>
-                    <br>
-                    <p>Dit is plaats voor fase 1</p>
-                    <br>
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h2>Fase 2</h2>
-                    <br>
-                    <br>
-                    <p>Dit is plaats voor fase 2</p>
-                    <br>
+            <div class="card">
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>Fase 3 | Ideation</h2>
+                        <br>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <p class="card-text">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</p>
+                                        </div>
+                                    </div>
+
+                                    <div style="overflow-y: scroll; height:400px; min-width:580px; margin-top:50px">
+                                        <div class="card">
+                                            <div class="card-body" style="max-width:500px;">
+                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
+                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
+                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                    </div>
+                                                </div>
+                                                <p>Idee text <br> Nog meer text</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body" style="max-width:500px;">
+                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
+                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
+                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                    </div>
+                                                </div>
+                                                <p>Idee text <br> Nog meer text</p>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body" style="max-width:500px;">
+                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
+                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
+                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
+                                                    <div class="btn-group">
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                    </div>
+                                                </div>
+                                                <p>Idee text <br> Nog meer text</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-5">
+                                    <div class="detailBox">
+                                        <div class="titleBox">
+                                            <label>Comment Box</label>
+                                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                                        </div>
+                                        <div class="commentBox">
+
+                                            <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                        </div>
+                                        <div class="actionBox">
+                                            <ul class="commentList">
+                                                <li>
+                                                    <div class="commenterImage">
+                                                        <img src="http://placekitten.com/50/50" />
+                                                    </div>
+                                                    <div class="commentText">
+                                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="commenterImage">
+                                                        <img src="http://placekitten.com/45/45" />
+                                                    </div>
+                                                    <div class="commentText">
+                                                        <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">15 Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">2 Comment</i> </button>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="commenterImage">
+                                                        <img src="http://placekitten.com/40/40" />
+                                                    </div>
+                                                    <div class="commentText">
+                                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">3 Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">0 Comment</i> </button>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <form class="form-inline" role="form">
+                                                <div class="form-group" style="margin-top: 50px">
+                                                    <input class="form-control" type="text" placeholder="Your comments" />
+                                                    <button class="btn btn-default">Add</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h2>Fase 3</h2>
-                    <br>
-                    <br>
-                    <p>Dit is plaats voor fase 3</p>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                <div class="card-body">
-                    <h2>Fase 4</h2>
-                    <br>
-                    <br>
-                    <p>Dit is plaats voor fase 4</p>
-                    <br>
+            <div class="card">
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <h2>Eindfase</h2>
+                        <br>
+                        <br>
+                        <p>In hac habitasse platea dictumst. Vivamus sit amet dolor id erat fermentum egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dui augue, dictum vel tincidunt ut, mollis eu ipsum. Integer in arcu fringilla, tempor lorem ut, dictum mauris. Pellentesque non sodales ligula, ut ullamcorper leo. Sed justo neque, lacinia vel pulvinar sit amet, convallis vitae augue. Sed quis orci quis sapien ornare lacinia ac et lacus. Aliquam tincidunt enim felis, ut luctus velit semper a. Integer in mattis ipsum. Aliquam imperdiet vestibulum risus et eleifend. Fusce tincidunt et urna quis semper. Fusce vitae auctor neque. Ut erat nisl, molestie a consectetur non, dignissim a nisi. </p>
+                        <br>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-    
-    <h2>Fase X</h2>
-        <div class="container">
-            <div class="row">
-                <div class="column">
-                    <div class="card">
-                        <div class="card-body" style="max-width:350px">
-                            <p class="card-text">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</p>
-                        </div>
-                    </div>
-
-                    <div style="overflow-y: scroll; height:400px; min-width:580px; margin-top:50px">
-                        <div class="card">
-                            <div class="card-body" style="max-width:500px;">
-                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
-                                    </div>
-                                </div>
-                                <p>Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice</p>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body" style="max-width:500px;">
-                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body" style="max-width:500px;">
-                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                    <div class="btn-group">
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
-                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="column">
-                    
-                    <div class="detailBox">
-                        <div class="titleBox">
-                            <label>Comment Box</label>
-                            <button type="button" class="close" aria-hidden="true">&times;</button>
-                        </div>
-                        <div class="commentBox">
-
-                            <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <div class="actionBox">
-                            <ul class="commentList">
-                                <li>
-                                    <div class="commenterImage">
-                                        <img src="http://placekitten.com/50/50" />
-                                    </div>
-                                    <div class="commentText">
-                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="commenterImage">
-                                        <img src="http://placekitten.com/45/45" />
-                                    </div>
-                                    <div class="commentText">
-                                        <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="commenterImage">
-                                        <img src="http://placekitten.com/40/40" />
-                                    </div>
-                                    <div class="commentText">
-                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                    </div>
-                                </li>
-                            </ul>
-                            <form class="form-inline" role="form">
-                                <div class="form-group">
-                                    <input class="form-control" type="text" placeholder="Your comments" />
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-default">Add</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- 
-
-
 </body>
 </html>
