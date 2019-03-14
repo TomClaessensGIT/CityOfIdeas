@@ -13,7 +13,7 @@ namespace CityOfIdeas.Controllers
             return View();
         }
 
-        public IActionResult Proficiat()
+        public IActionResult BevestigVragenlijst()
         {
             return View();
         }

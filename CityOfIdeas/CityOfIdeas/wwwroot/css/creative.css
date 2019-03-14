@@ -10760,3 +10760,7 @@ header.masthead h1 {
     border-top:1px dotted #bbb;
     padding:10px;
 }
+
+#spacer{
+    height:4rem;
+}
