@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CID.BL.Domain
 {
-    public class IdeationComment
+    public class IdeationComment : IValidatableObject
     {
         public int Id { get; set; }
         [Required]
@@ -15,6 +15,17 @@ namespace CID.BL.Domain
         [Required]
         public virtual Ideation Ideation { get; set; }
 
+        IEnumerable<ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        {
+            List<ValidationResult> errors = new List<ValidationResult>();
 
+            if (Date <= Ideation.DateOpened)
+            {
+                errors.Add(new ValidationResult("Can't be before the date the ticket is created!"
+                                                , new string[] { "Date", "Ticket.DateOpened" }));
+            }
+
+            return errors;
+        }
     }
 }

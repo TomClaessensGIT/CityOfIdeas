@@ -14,12 +14,12 @@ namespace CID.BL.Domain
         [Display(Name = "Titel")]
         public string Title { get; set; }
 
-        //public string ImageName { get; set; }
-
         [Display(Name = "Text")]
         public string Text { get; set; }
 
         public string Image { get; set; }
+
+        public DateTime DateOpened { get; set; }
 
         public virtual ICollection<Tag> Tags { get; set; }
 
