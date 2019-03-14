@@ -7,25 +7,26 @@
 
 <!-- Portfolio Section -->
 <div style="height:4rem"></div>
-<div class="container-fluid content-row">
-    <div class="row">
-        @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
-        {
-            <div class="col-sm-4 py-2">
-                <div class="card-img-top">
-                    <a asp-controller="Project" asp-action="Index"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
-                    <div class="card-body">
-                        <p class="card-text"> @proj.Title</p>
+<div class="container">
+    <div class="row pt-5 m-auto">
+        <div class="col-md-6 col-lg-4 pb-3">
 
-                        <div class="d-flex justify-content-between align-items-center">
-                            <div class="btn-group">
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">101 Like</i> </button>
-                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">25 Share</i> </button>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Copy the content below until next comment -->
+            <div class="card card-custom bg-white border-white border-0">
+                <div class="card-custom-img" style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);"></div>
+                <div class="card-custom-avatar">
+                    <img class="img-fluid" src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg" alt="Avatar" />
+                </div>
+                <div class="card-body" style="overflow-y: auto">
+                    <h4 class="card-title">Card title</h4>
+                    <p class="card-text">Card has minimum height set but will expand if more space is needed for card body content. You can use Bootstrap <a href="https://getbootstrap.com/docs/4.0/components/card/#card-decks" target="_blank">card-decks</a> to align multiple cards nicely in a row.</p>
+                </div>
+                <div class="card-footer" style="background: inherit; border-color: inherit;">
+                    <a href="#" class="btn btn-primary">Option</a>
+                    <a href="#" class="btn btn-outline-primary">Other option</a>
                 </div>
             </div>
-        }
-    </div>
+            <!-- Copy until here -->
+
+        </div>
     </div>
