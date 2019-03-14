@@ -198,12 +198,15 @@ namespace CID.DAL.EF
             {
                 Project = project5,
                 Title = "meer vuilbakken",
-                Text = "Aangezien deze straten nu ook fietsstraten zijn geworden zou ik graag willen dat er in elke straat meerdere verkeersdrempels komen zodat de auto's op hun snelheid moeten letten",
+                Text = "Al dat groen trekt precies meer afval aan want rond de bomen zie ik meer en meer afval verschijnen daarom pleit ik voor meer vuilbakken in de wijk",
                 Image = "images/portfolio/ideations/flitspalen.jpg",
                 Tags = new List<Tag>()
 
 
             };
+
+            ideation6.Tags.Add(tag2);
+            project5.Ideations.Add(ideation6);
 
             Project project6 = new Project()
             {
@@ -214,6 +217,20 @@ namespace CID.DAL.EF
                 Ideations = new List<Ideation>(),
 
             };
+
+            Ideation ideation7 = new Ideation()
+            {
+                Project = project5,
+                Title = "meer verlichting en controle",
+                Text = "Deze onverlichte gebieden trekken vaak louche zaken aan daarom  wil  ik graag meer verlichting en controles zodat het mogelijk is om hier 's avonds te wandelen",
+                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Tags = new List<Tag>()
+
+
+            };
+
+            ideation7.Tags.Add(tag2);
+            project6.Ideations.Add(ideation7);
 
             context.Projects.Add(project1);
             context.Projects.Add(project2);
