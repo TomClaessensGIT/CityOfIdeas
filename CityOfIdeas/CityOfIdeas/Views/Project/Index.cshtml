@@ -96,7 +96,7 @@
                         <h2>Fase 2 | Vragenlijst</h2>
                         <br>
                         <br>
-                        <form class="form-horizontal" asp-controller="Vragenlijst" asp-action="proficiat">
+                        <form class="form-horizontal" asp-controller="Vragenlijst" asp-action="proficiat" method="GET">
                     <fieldset>
                     
                     <!-- Form Name -->
@@ -222,9 +222,9 @@
                         <br>
                         <div class="container">
                             <div class="row">
-                                <div class="column">
+                                <div class="col-6">
                                     <div class="card">
-                                        <div class="card-body" style="max-width:350px">
+                                        <div class="card-body">
                                             <p class="card-text">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</p>
                                         </div>
                                     </div>
@@ -236,11 +236,11 @@
                                                 <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
                                                 <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
                                                     <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
                                                         <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
                                                     </div>
                                                 </div>
-                                                <p>Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice Ik ben echt nice</p>
+                                                <p>Idee text <br> Nog meer text</p>
                                             </div>
                                         </div>
                                         <div class="card">
@@ -249,10 +249,11 @@
                                                 <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
                                                 <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
                                                     <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
                                                         <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
                                                     </div>
                                                 </div>
+                                                <p>Idee text <br> Nog meer text</p>
                                             </div>
                                         </div>
                                         <div class="card">
@@ -261,17 +262,18 @@
                                                 <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
                                                 <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
                                                     <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
                                                         <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
                                                     </div>
                                                 </div>
+                                                <p>Idee text <br> Nog meer text</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
 
-                                <div class="column" style="max-width:500px">
+                                <div class="col-5">
                                     <div class="detailBox">
                                         <div class="titleBox">
                                             <label>Comment Box</label>
@@ -316,10 +318,8 @@
                                                 </li>
                                             </ul>
                                             <form class="form-inline" role="form">
-                                                <div class="form-group">
+                                                <div class="form-group" style="margin-top: 50px">
                                                     <input class="form-control" type="text" placeholder="Your comments" />
-                                                </div>
-                                                <div class="form-group">
                                                     <button class="btn btn-default">Add</button>
                                                 </div>
                                             </form>
