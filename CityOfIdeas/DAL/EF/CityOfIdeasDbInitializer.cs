@@ -55,6 +55,7 @@ namespace CID.DAL.EF
                 " Hierdoor ontstaan er rond de bruggen grote groene ruimtes, zijn de bruggen snel en eenvoudig te plaatsen en kan elke brug afzonderlijk worden aangepast bij een verdere ontwikkeling van het" +
                 " industrieterrein Blue Gate Antwerp of het project Lageweg.",
                 Image = "images/portfolio/thumbnails/brugProject.jpg",
+                IdeationVraag = "Hoe kan het design van de brug beter?",
                 Ideations = new List<Ideation>()
             };
 
@@ -81,7 +82,6 @@ namespace CID.DAL.EF
             Ideation ideation2 = new Ideation()
             {
                 Project = project1,
-
                 Title = "Maak de brug minder steil!",
                 Text = "De brug moet minder steil, zo kan iedereen gebruik maken van dit fantastisch idee ook oudere mensen!",
                 Tags = new List<Tag>()

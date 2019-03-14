@@ -7,6 +7,8 @@ namespace CID.BL.Domain
    public class Ideation 
     {
         public string ID { get; set; }
+
+
         [Required]
         [StringLength(100)]
         [Display(Name = "Titel")]

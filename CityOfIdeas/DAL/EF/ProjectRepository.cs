@@ -45,6 +45,12 @@ namespace CID.DAL.EF
             return ctx.Projects.Find(projectNumber);
         }
 
+        public Project ReadProjectWithIdeations(string projectNumber)
+        {
+            return ctx.Projects.Include(p => p.Ideations).SingleOrDefault(x => x.ID == projectNumber);
+            
+        }
+
         public IEnumerable<Project> ReadProjects()
         {
 

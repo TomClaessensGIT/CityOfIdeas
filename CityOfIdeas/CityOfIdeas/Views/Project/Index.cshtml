@@ -35,11 +35,11 @@
                 Your browser does not support the video tag.
             </video>
             *@
-            <img src="~/images/projectX.jpg" width="320" height="240" class="img-thumbnail proj-image" />
+            <img src="~/@Model.Image" width="320" height="240" class="img-thumbnail proj-image" />
         </div>
 
         <div class="col-md-8 col-12">
-            <h3>@Model.Title</h3>
+            <h2>@Model.Title</h2>
             <br>
             <article>
                 <p>@Model.Text </p>
@@ -228,50 +228,29 @@
                                 <div class="col-6">
                                     <div class="card">
                                         <div class="card-body">
-                                            <p class="card-text">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</p>
+                                            <p class="card-text">@Model.IdeationVraag</p>
                                         </div>
                                     </div>
-
                                     <div style="overflow-y: scroll; height:400px; min-width:580px; margin-top:50px">
-                                        <div class="card">
-                                            <div class="card-body" style="max-width:500px;">
-                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                        @if(Model.Ideations != null) {
+                                        @foreach (CID.BL.Domain.Ideation ideation in Model.Ideations)
+                                        {
+                                           <div class="card">
+                                                <div class="card-body" style="max-width:500px;">
+                                                    <h3 class="card-title">@ideation.Title</h3>
+                                                    <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
+                                                    <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
+                                                        <div class="btn-group">
+                                                            <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                        </div>
                                                     </div>
+                                                    <p>@ideation.Text</p>
                                                 </div>
-                                                <p>Idee text <br> Nog meer text</p>
                                             </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body" style="max-width:500px;">
-                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
-                                                    </div>
-                                                </div>
-                                                <p>Idee text <br> Nog meer text</p>
-                                            </div>
-                                        </div>
-                                        <div class="card">
-                                            <div class="card-body" style="max-width:500px;">
-                                                <h5 class="card-title">Ontwerpteam voor nieuwe Krugerbrug in Hoboken gekend.</h5>
-                                                <img class="card-img-bottom" src="~/images/portfolio/thumbnails/brugProject.jpg" alt="Card image cap">
-                                                <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
-                                                    </div>
-                                                </div>
-                                                <p>Idee text <br> Nog meer text</p>
-                                            </div>
-                                        </div>
+                                        }
+                                        }
+
                                     </div>
                                 </div>
 
