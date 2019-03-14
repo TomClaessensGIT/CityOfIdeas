@@ -21,7 +21,7 @@ namespace CityOfIdeas.Controllers
 
         public IActionResult Index(string id)
         {
-            Project project = mgr.GetProject(id);
+            Project project = mgr.GetProjectWithIdeations(id);
             return View(project);
         }
     }

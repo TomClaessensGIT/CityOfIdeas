@@ -8,6 +8,8 @@ namespace CID.BL.Domain
     public class Project
     {
         public string ID { get; set; }
+
+
         [Required]
         [StringLength(100)]
         [Display(Name = "Titel")]
@@ -22,6 +24,10 @@ namespace CID.BL.Domain
         public string Text { get; set; }
 
         public string Image { get; set; }
+
+        [StringLength(100)]
+        [Display(Name = "Vraag")]
+        public string IdeationVraag { get; set; }
 
         public ICollection<Ideation> Ideations { get; set; }
 

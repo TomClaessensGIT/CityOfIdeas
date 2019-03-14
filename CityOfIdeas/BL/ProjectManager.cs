@@ -45,7 +45,12 @@ namespace CID.BL
         {
             return repo.ReadProjects();
         }
-        
+
+        public Project GetProjectWithIdeations(string projectNumber)
+        {
+            return repo.ReadProjectWithIdeations(projectNumber);
+        }
+
         public void RemoveProject(string ticketNumber)
         {
             throw new NotImplementedException();

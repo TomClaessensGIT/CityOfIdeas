@@ -55,6 +55,7 @@ namespace CID.DAL.EF
                 " Hierdoor ontstaan er rond de bruggen grote groene ruimtes, zijn de bruggen snel en eenvoudig te plaatsen en kan elke brug afzonderlijk worden aangepast bij een verdere ontwikkeling van het" +
                 " industrieterrein Blue Gate Antwerp of het project Lageweg.",
                 Image = "images/portfolio/thumbnails/brugProject.jpg",
+                IdeationVraag = "Hoe kan het design van de brug beter?",
                 Ideations = new List<Ideation>()
             };
 
@@ -81,7 +82,6 @@ namespace CID.DAL.EF
             Ideation ideation2 = new Ideation()
             {
                 Project = project1,
-
                 Title = "Maak de brug minder steil!",
                 Text = "De brug moet minder steil, zo kan iedereen gebruik maken van dit fantastisch idee ook oudere mensen!",
                 Tags = new List<Tag>()
@@ -111,6 +111,19 @@ namespace CID.DAL.EF
                 Ideations = new List<Ideation>()
 
             };
+
+            Ideation ideation3 = new Ideation()
+            {
+                Project = project2,
+                Title = "Bomen permament verwijderen",
+                Text = "Ik vind het te gevaarlijk dat de bomen er staan dus ik zou graag willen dat ze permament verwijderd worden in plaats van af en toe ze te verkorten.",
+                Tags = new List<Tag>()
+
+            };
+            ideation3.Tags.Add(tag1);
+            ideation3.Tags.Add(tag2);
+            project2.Ideations.Add(ideation3);
+
             Project project3 = new Project()
             {
                 Title = "Plantin en Moretuslei.",
@@ -122,6 +135,19 @@ namespace CID.DAL.EF
                 Ideations = new List<Ideation>()
 
             };
+
+            Ideation ideation4 = new Ideation()
+            {
+                Project = project3,
+                Title = "flitspalen",
+                Text = "Wanneer ik met mijn fiets op de Jules Moretuslei rijd merk ik dat de auto's veel te snel rijden dus wil ik graag meer flietsplaten",
+                Tags = new List<Tag>()
+
+            };
+
+            ideation4.Tags.Add(tag2);
+            project3.Ideations.Add(ideation4);
+
             Project project4 = new Project()
             {
                 Title = "Rode loper Spoor Noord & Turnhoutsebaan.",
