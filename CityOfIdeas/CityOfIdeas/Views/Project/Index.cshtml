@@ -232,23 +232,24 @@
                                         </div>
                                     </div>
                                     <div style="overflow-y: scroll; height:400px; min-width:580px; margin-top:50px">
-                                        @if(Model.Ideations != null) {
-                                        @foreach (CID.BL.Domain.Ideation ideation in Model.Ideations)
+                                        @if (Model.Ideations != null)
                                         {
-                                           <div class="card">
-                                                <div class="card-body" style="max-width:500px;">
-                                                    <h3 class="card-title">@ideation.Title</h3>
-                                                    <img class="card-img-bottom" src="~/@ideation.Image" alt="Card image cap">
-                                                    <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
-                                                        <div class="btn-group">
-                                                            <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
-                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                            @foreach (CID.BL.Domain.Ideation ideation in Model.Ideations)
+                                            {
+                                                <div class="card">
+                                                    <div class="card-body" style="max-width:500px;">
+                                                        <h3 class="card-title">@ideation.Title</h3>
+                                                        <a asp-controller="Project" asp-action="LoadComments"><img class="card-img-bottom" src="~/@ideation.Image" alt="Card image cap"></a>
+                                                        <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
+                                                            <div class="btn-group">
+                                                                <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
+                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                            </div>
                                                         </div>
+                                                        <p>@ideation.Text</p>
                                                     </div>
-                                                    <p>@ideation.Text</p>
                                                 </div>
-                                            </div>
-                                        }
+                                            }
                                         }
 
                                     </div>
@@ -267,42 +268,25 @@
                                         </div>
                                         <div class="actionBox">
                                             <ul class="commentList">
-                                                <li>
-                                                    <div class="commenterImage">
-                                                        <img src="http://placekitten.com/50/50" />
-                                                    </div>
-                                                    <div class="commentText">
-                                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
 
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="commenterImage">
-                                                        <img src="http://placekitten.com/45/45" />
-                                                    </div>
-                                                    <div class="commentText">
-                                                        <p class="">Hello this is a test comment and this comment is particularly very long and it goes on and on and on.</p> <span class="date sub-text">on March 5th, 2014</span>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">15 Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">2 Comment</i> </button>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="commenterImage">
-                                                        <img src="http://placekitten.com/40/40" />
-                                                    </div>
-                                                    <div class="commentText">
-                                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">3 Like</i> </button>
-                                                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">0 Comment</i> </button>
-                                                    </div>
-                                                </li>
+
+
+                                                    <li>
+                                                        <div class="commenterImage">
+                                                            <img src="http://placekitten.com/50/50" />
+                                                        </div>
+                                                        <div class="commentText">
+
+                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
+                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
+                                                        </div>
+                                                    </li>
+                                            
                                             </ul>
                                             <form class="form-inline" role="form">
                                                 <div class="form-group" style="margin-top: 50px">
                                                     <input class="form-control" type="text" placeholder="Your comments" />
-                                                    <button class="btn btn-default">Add</button>
+                                                    <button class="btn btn-default" onclick="postResponse">Add</button>
                                                 </div>
                                             </form>
                                         </div>
@@ -329,3 +313,48 @@
     </div>
 </body>
 </html>
+@section Scripts
+    {
+    <script type="text/javascript">
+        // Toon responses
+        function loadCommentsOfIdeation(ideationNumber) {
+            $.ajax('/api/TicketResponses?ideationnumber=' + ideationNumber, {
+                    type: 'GET',
+                    dataType: 'json' // data-type expected back (response-data parsed to object)
+                })
+                .done(function (data) { showComments(data); })
+                .fail(function () { alert('Oeps, something went wrong!'); });
+        }
+        function showComments(comments) {
+            $('table#comments').find('tr:gt(0)').remove();
+            setTimeout(function () {
+                comments.forEach(function (comments) { addCommentToList(comments); });
+            }, 1000);
+        }
+        function addCommentToList(comments) {
+            var date = new Date(comments.date);
+            var checked = comments.isClientResponse ? 'checked="checked"' : '';
+            $('table#comments').append('<p class="">' + comments.text + '</p> <span class="date sub-text"> ' + date.toLocaleString() + '</span>');
+
+        }
+
+        // Voeg nieuw response toe
+        function postResponse() {
+            var ideationNumber = '@Model';
+            var answer = $('#responseText').val();
+            if (answer) {
+                var newResponse = { ticketNumber: ticketNumber, responseText: answer,
+                                    isClientResponse: false }
+                $.ajax('/api/TicketResponses', {
+                        type: 'POST',
+                        data: JSON.stringify(newResponse),
+                        contentType : 'application/json',
+                        dataType: 'json' // data-type expected back
+                    })
+                    .done(function (data) { addResponseToList(data);
+                        $('#responseText').val(''); })
+                    .fail(function () { alert('Oeps, something went wrong!'); });
+            }
+        }
+    </script>
+}
