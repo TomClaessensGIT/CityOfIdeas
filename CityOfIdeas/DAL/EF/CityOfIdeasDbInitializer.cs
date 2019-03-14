@@ -66,7 +66,6 @@ namespace CID.DAL.EF
                 Text = "Ik zou het enorm goed vinden moest er een onderscheid kunnen gemaakt worden tussen de fietsers en de voetgangers waardoor geen van de 2 last heeft van elkaar.",
                 Image = "images/portfolio/ideations/fietsersGescheiden.jpg",
                 Tags = new List<Tag>()
-
             };
             //Gebruik maken van tags!!
             Tag tag1 = new Tag()
@@ -164,6 +163,22 @@ namespace CID.DAL.EF
                 Ideations = new List<Ideation>()
 
             };
+
+
+            Ideation ideation5 = new Ideation()
+            {
+                Project = project4,
+                Title = "verkeersdrempel",
+                Text = "Aangezien deze straten nu ook fietsstraten zijn geworden zou ik graag willen dat er in elke straat meerdere verkeersdrempels komen zodat de auto's op hun snelheid moeten letten",
+                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Tags = new List<Tag>()
+
+
+            };
+
+            ideation5.Tags.Add(tag2);
+            project4.Ideations.Add(ideation5);
+
             Project project5 = new Project()
             {
                 Title = "Met z’n allen naar een mooie, groene buurt in Mariaburg.",
@@ -178,6 +193,21 @@ namespace CID.DAL.EF
                 Image = "images/portfolio/thumbnails/mariaBurg.jpg",
                 Ideations = new List<Ideation>()
             };
+
+            Ideation ideation6 = new Ideation()
+            {
+                Project = project5,
+                Title = "meer vuilbakken",
+                Text = "Al dat groen trekt precies meer afval aan want rond de bomen zie ik meer en meer afval verschijnen daarom pleit ik voor meer vuilbakken in de wijk",
+                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Tags = new List<Tag>()
+
+
+            };
+
+            ideation6.Tags.Add(tag2);
+            project5.Ideations.Add(ideation6);
+
             Project project6 = new Project()
             {
                 Title = "Groenplan zorgt voor 187 hectaren extra groen in de stad.",
@@ -187,6 +217,20 @@ namespace CID.DAL.EF
                 Ideations = new List<Ideation>(),
 
             };
+
+            Ideation ideation7 = new Ideation()
+            {
+                Project = project5,
+                Title = "meer verlichting en controle",
+                Text = "Deze onverlichte gebieden trekken vaak louche zaken aan daarom  wil  ik graag meer verlichting en controles zodat het mogelijk is om hier 's avonds te wandelen",
+                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Tags = new List<Tag>()
+
+
+            };
+
+            ideation7.Tags.Add(tag2);
+            project6.Ideations.Add(ideation7);
 
             context.Projects.Add(project1);
             context.Projects.Add(project2);
