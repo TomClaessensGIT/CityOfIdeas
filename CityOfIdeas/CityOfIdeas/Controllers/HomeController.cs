@@ -26,5 +26,11 @@ namespace CityOfIdeas.Controllers
         {
             return View();
         }
+
+        public IActionResult Project()
+        {
+            ViewBag.projects = mgr.GetProjects();
+            return View();
+        }
     }
 }

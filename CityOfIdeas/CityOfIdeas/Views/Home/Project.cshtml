@@ -1,0 +1,31 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<!-- Portfolio Section -->
+<div style="height:4rem"></div>
+<div class="container-fluid content-row">
+    <div class="row">
+        @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
+        {
+            <div class="col-sm-4 py-2">
+                <div class="card-img-top">
+                    <a asp-controller="Project" asp-action="Index"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
+                    <div class="card-body">
+                        <p class="card-text"> @proj.Title</p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">101 Like</i> </button>
+                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">25 Share</i> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+    </div>

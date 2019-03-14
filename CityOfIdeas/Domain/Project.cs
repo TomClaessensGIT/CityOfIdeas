@@ -21,6 +21,8 @@ namespace CID.BL.Domain
         [Display(Name = "Text")]
         public string Text { get; set; }
 
+        public string Image { get; set; }
+
         public ICollection<Ideation> Ideations { get; set; }
 
         //public byte[] Img { get; set; }
