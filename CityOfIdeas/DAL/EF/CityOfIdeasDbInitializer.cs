@@ -170,7 +170,7 @@ namespace CID.DAL.EF
                 Project = project4,
                 Title = "verkeersdrempel",
                 Text = "Aangezien deze straten nu ook fietsstraten zijn geworden zou ik graag willen dat er in elke straat meerdere verkeersdrempels komen zodat de auto's op hun snelheid moeten letten",
-                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Image = "images/portfolio/ideations/drempels.jpg",
                 Tags = new List<Tag>()
 
 
@@ -199,7 +199,7 @@ namespace CID.DAL.EF
                 Project = project5,
                 Title = "meer vuilbakken",
                 Text = "Al dat groen trekt precies meer afval aan want rond de bomen zie ik meer en meer afval verschijnen daarom pleit ik voor meer vuilbakken in de wijk",
-                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Image = "images/portfolio/ideations/vuilbakken.jpg",
                 Tags = new List<Tag>()
 
 
@@ -223,7 +223,7 @@ namespace CID.DAL.EF
                 Project = project6,
                 Title = "meer verlichting en controle",
                 Text = "Deze onverlichte gebieden trekken vaak louche zaken aan daarom  wil  ik graag meer verlichting en controles zodat het mogelijk is om hier 's avonds te wandelen",
-                Image = "images/portfolio/ideations/flitspalen.jpg",
+                Image = "images/portfolio/ideations/straatlamp.jpg",
                 Tags = new List<Tag>()
 
 
