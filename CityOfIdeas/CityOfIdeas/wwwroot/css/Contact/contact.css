@@ -155,6 +155,19 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Contact ]*/
+#backgroundLogin {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(92, 77, 66, 0.8)), to(rgba(92, 77, 66, 0.8))), url("/images/antwerp-centraalstation.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/images/antwerp-centraalstation.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
 
 .container-contact100 {
   width: 100%;  
