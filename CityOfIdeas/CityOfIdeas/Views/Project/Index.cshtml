@@ -1,7 +1,9 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using CID.BL.Domain
 @model CID.BL.Domain.Project
 @{
     ViewData["Title"] = "Home Page";
+    var comments = ViewData["comments"] as IEnumerable<IdeationComment>;
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 <!DOCTYPE html>
@@ -35,9 +37,8 @@
                     Your browser does not support the video tag.
                 </video>
             *@
-            <img src="~/@Model.Image" width="320" height="240" class="img-thumbnail proj-image" />
+            <img src="~/@Model.Image" width="500" height="500" class="img-thumbnail proj-image" />
         </div>
-
         <div class="col-md-8 col-12">
             <h2>@Model.Title</h2>
             <br>
@@ -45,7 +46,6 @@
                 <p>@Model.Text </p>
             </article>
         </div>
-
         <div class="col-8">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="btn btn-secondary">
@@ -62,7 +62,7 @@
                 </label>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-4" style="text-align:right;">
             <input onclick="this.value = 'Gestemd'; this.disabled=true" type="button" class="btn btn-primary btn-lg stem-stem" value="Stem" id="myButton1" />
         </div>
     </div>
@@ -99,12 +99,10 @@
                         <h2>Fase 2 | Vragenlijst</h2>
                         <br>
                         <br>
-                        <form class="form-horizontal" asp-controller="Vragenlijst" asp-action="proficiat" method="GET">
+                        <form class="form-horizontal" asp-controller="Vragenlijst" asp-action="BevestigVragenlijst" method="get">
                             <fieldset>
-
                                 <!-- Form Name -->
                                 <legend>Krugerbrug Design</legend>
-
                                 <!-- Multiple Radios (inline) -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="radios">Zone</label>
@@ -119,7 +117,6 @@
                                         </label>
                                     </div>
                                 </div>
-
                                 <!-- Multiple Radios -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="locatie">Ik woon in</label>
@@ -150,7 +147,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- Select Basic -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="selectbasic">Kleur Brug</label>
@@ -163,7 +159,6 @@
                                         </select>
                                     </div>
                                 </div>
-
                                 <!-- Multiple Checkboxes -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="checkboxes">Opties</label>
@@ -194,7 +189,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 <!-- Textarea -->
                                 <div class="form-group">
                                     <label class="col-md-4 control-label" for="textarea">Extra opmerking:</label>
@@ -202,17 +196,14 @@
                                         <textarea class="form-control" id="textarea" name="textarea">opmerkingen...</textarea>
                                     </div>
                                 </div>
-
                                 <!-- Button -->
                                 <div class="form-group">
                                     <div class="col-md-4">
                                         <button id="singlebutton" name="singlebutton" class="btn btn-success">Verzend</button>
                                     </div>
                                 </div>
-
                             </fieldset>
                         </form>
-
                         <br>
                     </div>
                 </div>
@@ -239,22 +230,23 @@
                                                 <div class="card">
                                                     <div class="card-body" style="max-width:500px;">
                                                         <h3 class="card-title">@ideation.Title</h3>
-                                                        <a asp-controller="Project" asp-action="LoadComments"><img class="card-img-bottom" src="~/@ideation.Image" alt="Card image cap"></a>
+                                                        <a onclick="getComments('@ideation.ID')"><img class="card-img-bottom" src="~/@ideation.Image" alt="Card image cap"></a>
                                                         <div class="d-flex justify-content-between align-items-center" style="margin-top:20px">
                                                             <div class="btn-group">
-                                                                <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up">Like</i> </button>
-                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">Share</i> </button>
+                                                                <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up"> Like</i> </button>
+                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share"> Share</i> </button>
+                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-vote-yea"> Stem</i> </button>
+                                                                <i style="margin-left:170px"><span id="ideationStem">10</span> stemmen</i>
                                                             </div>
                                                         </div>
                                                         <p>@ideation.Text</p>
                                                     </div>
+                                                    
                                                 </div>
                                             }
                                         }
-
                                     </div>
                                 </div>
-
 
                                 <div class="col-5">
                                     <div class="detailBox">
@@ -263,32 +255,18 @@
                                             <button type="button" class="close" aria-hidden="true">&times;</button>
                                         </div>
                                         <div class="commentBox">
-
-                                            <p class="taskDescription">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        </div>
                                         <div class="actionBox">
-                                            <ul class="commentList">
+                                            <ul class="commentList" name="cmtList">
+                                                @* Dynamicly loaded *@
 
 
-
-                                                    <li>
-                                                        <div class="commenterImage">
-                                                            <img src="http://placekitten.com/50/50" />
-                                                        </div>
-                                                        <div class="commentText">
-
-                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
-                                                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
-                                                        </div>
-                                                    </li>
-                                            
                                             </ul>
-                                            <form class="form-inline" role="form">
-                                                <div class="form-group" style="margin-top: 50px">
-                                                    <input class="form-control" type="text" placeholder="Your comments" />
-                                                    <button class="btn btn-default" onclick="postResponse">Add</button>
-                                                </div>
-                                            </form>
+
+                                            <div class="form-group" style="margin-top: 50px">
+                                                <input class="form-control" type="text" placeholder="Your comments" name="contentComment" />
+                                                <button class="btn btn-default" onclick="addComment()">Add</button>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -344,7 +322,7 @@
             var answer = $('#responseText').val();
             if (answer) {
                 var newResponse = { ticketNumber: ticketNumber, responseText: answer,
-                                    isClientResponse: false }
+                    isClientResponse: false }
                 $.ajax('/api/TicketResponses', {
                         type: 'POST',
                         data: JSON.stringify(newResponse),
@@ -357,4 +335,54 @@
             }
         }
     </script>
+    <script>
+        function getComments(id) {
+            document.getElementsByName("cmtList")[0].innerHTML =
+                `<li>
+                    <div class="commenterImage">
+                        <img src="http://placekitten.com/50/50" />
+                        </div>
+                        <div class="commentText">
+                        <p>Lorem ipsum</p>
+                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">49 Like</i> </button>
+                        <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">17 Comment</i> </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="commenterImage">
+                            <img src="http://placekitten.com/50/50" />
+                        </div>
+                        <div class="commentText">
+                            <p>Burg moet langer</p>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">33 Like</i> </button>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">5 Comment</i> </button>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="commenterImage">
+                            <img src="http://placekitten.com/50/50" />
+                        </div>
+                        <div class="commentText">
+                            <p>meer comment</p>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">4 Like</i> </button>
+                            <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">1 Comment</i> </button>
+                        </div>
+                    </li>`;
+        };
+
+        function addComment() {
+            document.getElementsByName("cmtList")[0].innerHTML +=
+                `<li>
+                    <div class="commenterImage">
+                    <img src="http://placekitten.com/50/50" />
+                    </div>
+                    <div class="commentText">
+                    <p>` + document.getElementsByName('contentComment')[0].value + `</p>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">O Like</i> </button>
+                    <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-comment">O Comment</i> </button>
+                    </div>
+                    </li>`;
+        }
+    </script>
+       
 }

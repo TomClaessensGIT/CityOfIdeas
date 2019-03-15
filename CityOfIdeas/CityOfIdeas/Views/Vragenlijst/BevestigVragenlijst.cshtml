@@ -7,13 +7,36 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
 <body>
     <div style="height:9rem"></div>
-    <div class="container" style="min-height:495px">
+    <div class="container" style="min-height:55px;">
         <div class="col-md-8 col-12">
             <h3>Uw vragenlijst is verzonden, dank u wel! Klik <a asp-controller="Home" asp-action="Index">hier</a> om naar de home pagina te gaan.</h3>
+        </div>
+    </div>
+    <div class="container-fluid content-row" >
+        <div style="text-align:center">
+            <h3>Bekijk hier nog andere projecten!</h3>
+        </div>
+        <div class="row">
+            @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
+            {
+                <div class="col-sm-4 py-2">
+                    <div class="card-img-top">
+                        <a asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <p class="card-text"> @proj.Title</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-thumbs-up">101 Like</i> </button>
+                                    <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share">25 Share</i> </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
         </div>
     </div>
 </body>

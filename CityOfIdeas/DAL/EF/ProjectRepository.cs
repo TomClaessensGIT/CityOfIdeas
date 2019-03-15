@@ -53,7 +53,6 @@ namespace CID.DAL.EF
 
         public IEnumerable<Project> ReadProjects()
         {
-
             return ctx.Projects.Include(t => t.Ideations).AsEnumerable();
         }
 
