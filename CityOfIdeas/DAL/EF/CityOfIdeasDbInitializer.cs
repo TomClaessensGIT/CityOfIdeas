@@ -145,7 +145,7 @@ namespace CID.DAL.EF
             {
                 Project = project3,
                 Title = "flitspalen",
-                Text = "Wanneer ik met mijn fiets op de Jules Moretuslei rijd merk ik dat de auto's veel te snel rijden dus wil ik graag meer flietsplaten",
+                Text = "Wanneer ik met mijn fiets op de Jules Moretuslei rijd merk ik dat de auto's veel te snel rijden dus wil ik graag meer flitspalen",
                 Image = "images/portfolio/ideations/flitspalen.jpg",
                 Tags = new List<Tag>()
 

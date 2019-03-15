@@ -90,7 +90,7 @@
             <div class="card">
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
-                        <h2>Porject gestart</h2>
+                        <h2>Project gestart</h2>
                         <br>
                         <br>
                         <p>In hac habitasse platea dictumst. Vivamus sit amet dolor id erat fermentum egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dui augue, dictum vel tincidunt ut, mollis eu ipsum. Integer in arcu fringilla, tempor lorem ut, dictum mauris. Pellentesque non sodales ligula, ut ullamcorper leo. Sed justo neque, lacinia vel pulvinar sit amet, convallis vitae augue. Sed quis orci quis sapien ornare lacinia ac et lacus. Aliquam tincidunt enim felis, ut luctus velit semper a. Integer in mattis ipsum. Aliquam imperdiet vestibulum risus et eleifend. Fusce tincidunt et urna quis semper. Fusce vitae auctor neque. Ut erat nisl, molestie a consectetur non, dignissim a nisi. </p>
@@ -240,7 +240,7 @@
                                                             <div class="btn-group">
                                                                 <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up"> Like</i> </button>
                                                                 <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share"> Share</i> </button>
-                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-vote-yea"> Stem</i> </button>
+                                                                <button onclick="vote()" class="btn btn-sm btn-outline-secondary"><i class="fa fa-vote-yea"> Stem</i> </button>
                                                                 <i style="margin-left:170px"><span id="ideationStem">10</span> stemmen</i>
                                                             </div>
                                                         </div>
@@ -295,6 +295,14 @@
     </div>
 </body>
 </html>
+<script>
+    function vote(){
+        var clicks = document.getElementById("ideationStem").innerHTML;
+        clicks++;
+        document.getElementById("ideationStem").innerHTML = clicks;
+    }
+</script>
+
 @section Scripts
     {
     <script type="text/javascript">
