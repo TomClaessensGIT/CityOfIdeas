@@ -240,7 +240,7 @@
                                                             <div class="btn-group">
                                                                 <button class="btn btn-sm btn-outline-secondary like"><i class="fa fa-thumbs-up"> Like</i> </button>
                                                                 <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-share"> Share</i> </button>
-                                                                <button class="btn btn-sm btn-outline-secondary"><i class="fa fa-vote-yea"> Stem</i> </button>
+                                                                <button onclick="vote()" class="btn btn-sm btn-outline-secondary"><i class="fa fa-vote-yea"> Stem</i> </button>
                                                                 <i style="margin-left:170px"><span id="ideationStem">10</span> stemmen</i>
                                                             </div>
                                                         </div>
@@ -296,6 +296,14 @@
     </div>
 </body>
 </html>
+<script>
+    function vote(){
+        var clicks = document.getElementById("ideationStem").innerHTML;
+        clicks++;
+        document.getElementById("ideationStem").innerHTML = clicks;
+    }
+</script>
+
 @section Scripts
     {
     <script type="text/javascript">
