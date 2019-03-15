@@ -45,7 +45,7 @@
     <div class="row">
         @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
         {
-            <div class="col-sm-4 py-2">
+            <div class="col-sm-4 py-2" style="box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.2); transition: 0.3s; margin-bottom:20px">
                 <div class="card-img-top">
                     <a asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID"><img class="card-img-top" src="~/@proj.Image" alt="Card image cap"></a>
                     <div class="card-body">
