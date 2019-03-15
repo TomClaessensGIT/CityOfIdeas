@@ -55,6 +55,7 @@ namespace CID.DAL.EF
                 " Hierdoor ontstaan er rond de bruggen grote groene ruimtes, zijn de bruggen snel en eenvoudig te plaatsen en kan elke brug afzonderlijk worden aangepast bij een verdere ontwikkeling van het" +
                 " industrieterrein Blue Gate Antwerp of het project Lageweg.",
                 Image = "images/portfolio/thumbnails/brugProject.jpg",
+                AantalStemmen = 10,
                 IdeationVraag = "Hoe kan het design van de brug beter?",
                 Ideations = new List<Ideation>()
             };
@@ -109,6 +110,7 @@ namespace CID.DAL.EF
                 "Ze kunnen dan op de weg terechtkomen en een gevaar vormen voor de weggebruikers.Hakhoutbeheer helpt dit voorkomen.Het hakhoutseizoen loopt van 1 november tot 15 maart het volgende jaar." +
                 "Hakhoutbeheer wordt in de winterperiode uitgevoerd omdat bomen niet in het blad staan, de sapstroom langzamer verloopt(en de bomen dus minder kwetsbaar zijn) en de vogels niet broeden.",
                 Image = "images/portfolio/thumbnails/hakhoutBeheer.jpg",
+                AantalStemmen = 20,
                 Ideations = new List<Ideation>()
 
             };
@@ -134,6 +136,7 @@ namespace CID.DAL.EF
                 "vandaag via deze weg de stad in en uit fietst. Om de veiligheid en het comfort voor zowel de fietsers als de voetgangers te verbeteren, plannen het Agentschap Wegen en Verkeer " +
                 "(dat de weg beheert) en de stad Antwerpen een grondige herinrichting.   ",
                 Image = "images/portfolio/thumbnails/Plantin.jpg",
+                AantalStemmen = 30,
                 Ideations = new List<Ideation>()
 
             };
@@ -160,6 +163,7 @@ namespace CID.DAL.EF
                 "Damplein kan u doorrijden tot in Park Spoor Noord.  Aan de andere kant van het park kan u via de Lange Dijkstraat en de Rotterdamstraat naar de Van Stralenstraat om via de Pijlstraat " +
                 "en de Van Arteveldestraat het centrum te bereiken.",
                 Image = "images/portfolio/thumbnails/rodeLooper.jpg",
+                AantalStemmen = 10,
                 Ideations = new List<Ideation>()
 
             };
@@ -191,6 +195,7 @@ namespace CID.DAL.EF
                 "afdwingbaar document dat in concrete richtlijnen zegt wat er wel en niet kan in een afgebakend gebied.Het bepaalt waar en hoe er in uw buurt in de toekomst gebouwd en verbouwd mag worden." +
                 "Op welke plaatsen kunnen er bijvoorbeeld woningen,bedrijven,winkels,openbare ruimte of recreatie komen ? Alle toekomstige ontwikkelingen worden aan dit plan getoetst.",
                 Image = "images/portfolio/thumbnails/mariaBurg.jpg",
+                AantalStemmen = 15,
                 Ideations = new List<Ideation>()
             };
 
@@ -214,6 +219,7 @@ namespace CID.DAL.EF
                 Preface= "Ongeveer de helft van Antwerpen bestaat uit groen of water. De stad wil deze groenzones beschermen, verbinden en zowel kwantitatief als kwalitatief versterken. Om dat te verwezenlijken, is er nu het Groenplan ‘Levendig landschap’. De komende jaren worden er ook Groenplannen uitgewerkt voor de districten en dit in overleg met de betrokken districtsbesturen.",
                 Text = "Met de realisatie van het Groenplan zal het groenareaal van de stad – op dit moment zo’n 6200 hectaren – met 3% of 187 hectaren groeien. Maar liefst 6% of 358 hectaren groen zal extra juridisch beschermd worden als groengebied en nog eens 15% of 819 hectaren zal kwalitatiever worden dankzij een nieuwe inrichting of beter beheer. Het einddoel is een systeem van grootschalige groengebieden die de stad verlevendigen en de bewoners overal in de stad toegang geven tot aangename groene landschappen. Zo wil de stad een duurzame leefomgeving creëren voor mens, plant en dier, nu en in de toekomst. ",
                 Image = "images/portfolio/thumbnails/groenPlan.jpg",
+                AantalStemmen = 6,
                 Ideations = new List<Ideation>(),
 
             };

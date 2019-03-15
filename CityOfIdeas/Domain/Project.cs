@@ -25,6 +25,8 @@ namespace CID.BL.Domain
 
         public string Image { get; set; }
 
+        public int AantalStemmen { get; set; }
+
         [StringLength(100)]
         [Display(Name = "Vraag")]
         public string IdeationVraag { get; set; }

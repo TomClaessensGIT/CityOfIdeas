@@ -62,8 +62,13 @@
                 </label>
             </div>
         </div>
-        <div class="col-4" style="text-align:right;">
-            <input onclick="this.value = 'Gestemd'; this.disabled=true" type="button" class="btn btn-primary btn-lg stem-stem" value="Stem" id="myButton1" />
+        <div class="col-4">
+            @*onclick="this.value = 'Gestemd'; this.disabled=true"*@
+            <form asp-controller="Project" asp-action="Stem" asp-route-id="@Model.ID" method="post">
+                <button type="submit" class="btn btn-primary btn-lg stem-stem" value="Stem" id="myButton1">Stem</button>
+                <p style="text-align:left">@Model.AantalStemmen stemmen</p>
+            </form>
+
         </div>
     </div>
     <div class="row no-gutters">

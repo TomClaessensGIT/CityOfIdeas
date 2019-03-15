@@ -55,5 +55,10 @@ namespace CID.BL
         {
             throw new NotImplementedException();
         }
+
+        public void Stem(string projectNumber)
+        {
+            repo.Stem(projectNumber);
+        }
     }
 }
