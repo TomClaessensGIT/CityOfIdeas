@@ -19,10 +19,9 @@
             <div class="row" style="margin-top:30px; margin-bottom:100px; align-content:center">
                 @foreach (CID.BL.Domain.Project proj in ViewBag.projects)
                 {
-
                     <div class="card" style="width: 37rem; height: 45rem; margin-right:10px; margin-bottom:10px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); transition: 0.3s;">
                         <div style="margin-top:5px; border: 1px solid white; border-radius: 4px;padding: 5px;" >
-                            <h3 style="height:40px; font-weight:bold " ;>@proj.Title</h3>
+                            <h3 style="height:40px; font-weight:bold;">@proj.Title</h3>
                         </div>
                         <hr />
                         <a asp-controller="Project" asp-action="Index" asp-route-id="@proj.ID"><img class="card-img-top" src="~/@proj.Image" style="border: 1px solid white; border-radius: 4px;padding: 5px;"></a>
