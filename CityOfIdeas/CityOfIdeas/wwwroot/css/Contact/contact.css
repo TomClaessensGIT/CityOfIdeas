@@ -142,9 +142,7 @@ iframe {
 
 
 /*---------------------------------------------*/
-.container {
-	max-width: 1200px;
-}
+
 
 
 /*//////////////////////////////////////////////////////////////////
@@ -234,12 +232,7 @@ iframe {
 [  ]*/
 
 
-.wrap-input100 {
-  width: 100%;
-  position: relative;
-  padding: 10px 30px 9px 22px;
-  margin-bottom: 20px;
-}
+
     
 
 .rs1-wrap-input100 {
