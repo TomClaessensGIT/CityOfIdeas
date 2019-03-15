@@ -19,9 +19,10 @@ namespace CityOfIdeas.Controllers
 
         }
 
-        public IActionResult Index(string id)
+        public IActionResult Index(string id, bool gestemd = false)
         {
             Project project = mgr.GetProjectWithIdeations(id);
+            ViewData["gestemd"] = gestemd;
             return View(project);
         }
 
@@ -33,9 +34,8 @@ namespace CityOfIdeas.Controllers
 
         public IActionResult Stem(string id)
         {
-
             mgr.Stem(id);
-            return RedirectToAction("Index", "Project", new { id = id });
+            return RedirectToAction("Index", "Project", new { id = id, gestemd = true});
         }
 
     }
