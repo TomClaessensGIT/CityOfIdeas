@@ -11,10 +11,11 @@ namespace CID.DAL.EF
     {
         public CityOfIdeasDbContext()
         {
-            CityOfIdeasDbInitializer.Initialize(this, false);
+            CityOfIdeasDbInitializer.Initialize(this, true);
         }
         public DbSet<Project> Projects { get; set; }
         public DbSet<Ideation> Ideations { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

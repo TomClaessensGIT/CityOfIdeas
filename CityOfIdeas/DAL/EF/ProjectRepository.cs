@@ -41,14 +41,14 @@ namespace CID.DAL.EF
 
         public Project ReadProject(string projectNumber)
         {
-           
+
             return ctx.Projects.Find(projectNumber);
         }
 
         public Project ReadProjectWithIdeations(string projectNumber)
         {
             return ctx.Projects.Include(p => p.Ideations).SingleOrDefault(x => x.ID == projectNumber);
-            
+
         }
 
         public IEnumerable<Project> ReadProjects()
@@ -60,5 +60,12 @@ namespace CID.DAL.EF
         {
             throw new NotImplementedException();
         }
+
+        public void Stem(string projectNumber)
+        {
+            ctx.Projects.Find(projectNumber).AantalStemmen++;
+            ctx.SaveChanges();
+        }
     }
 }
+

@@ -14,6 +14,7 @@ namespace CID.BL
 
         void ChangeProject(Project ticket);
         void RemoveProject(string projectNumber);
+        void Stem(string projectNumber);
 
         IEnumerable<Ideation> GetIdeations(string projectNumber);
         Ideation AddIdeation(string projectNumber, string title, string text, ICollection<TagEnum> tags);

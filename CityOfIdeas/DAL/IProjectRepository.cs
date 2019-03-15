@@ -16,6 +16,7 @@ namespace CID.DAL
         Project ReadProjectWithIdeations(string projectNumber);
             void UpdateProject(Project ticket);
             void DeleteProject(string projectNumber);
+        void Stem(string projectNumber);
             #endregion
 
             #region ProjectIdeation
