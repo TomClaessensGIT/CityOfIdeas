@@ -33,6 +33,7 @@ namespace CityOfIdeas.Controllers
 
         public IActionResult Stem(string id)
         {
+
             mgr.Stem(id);
             return RedirectToAction("Index", "Project", new { id = id });
         }
